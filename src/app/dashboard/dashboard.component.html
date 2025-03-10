@@ -1,0 +1,138 @@
+<div class="profile-container">
+  <section class="stats">
+    <button class="card" (click)="onPendingRequestsClick()">Pending Requests <span>1</span></button>
+    <button class="card" (click)="onApprovedRequestsClick()">Approved Requests <span>1</span></button>
+  </section>
+
+  <section class="requests">
+    <table>
+        <tr>
+          <th>Name</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+        <tr>
+          <td>Dr.Sarah Lee</td>
+          <td>20/11/2024</td>
+          <td>06:00 PM</td>
+          <td>Pending</td>
+          <td>
+            <button (click)="navigateToAppoinmentDetails()" class="view-btn">
+              View
+            </button>
+          </td>
+
+        </tr>
+        <tr>
+          <td>Dr. Oliviya</td>
+          <td>...</td>
+          <td>...</td>
+          <td style="background-color: #10e908;">Accepted </td>
+          <td>
+            <button (click)="navigateToAppoinmentDetails()" class="view-btn">
+              View
+            </button>
+          </td>
+
+        </tr>
+
+    </table>
+  </section>
+</div>
+
+<!-- Feed Section -->
+<div class="feed">
+  <!-- Post 1 -->
+  <div class="post">
+    <div class="post-header">
+      <img src="https://via.placeholder.com/50" alt="User" class="avatar">
+      <div class="post-info">
+        <h3>User Name</h3>
+        <small>2 hours ago</small>
+      </div>
+    </div>
+    <div class="post-content">
+      <p><u>Overview of Anxiety Disorders</u></p>
+      <p>
+        Anxiety is one of the most common mental health disorders, affecting millions of people worldwide.
+        It can manifest in various forms, including generalized anxiety disorder, panic disorder, social
+        anxiety disorder, and specific phobias.
+      </p>
+      <ul>
+        <li>Persistent worry or fear</li>
+        <li>Increased heart rate</li>
+        <li>Shortness of breath</li>
+        <li>Restlessness or feeling "on edge"</li>
+        <li>Difficulty concentrating</li>
+      </ul>
+      <img src="https://via.placeholder.com/600x300" alt="Post Image">
+    </div>
+    <div class="post-actions">
+      <button (click)="toggleLike(1)" [class.liked]="posts[0].isLiked">
+        <i *ngIf="posts[0].isLiked" class="fa fa-heart"></i>
+        <i *ngIf="!posts[0].isLiked" class="fa fa-heart-o"></i>
+        Like
+      </button>
+      <span>{{ posts[0].likeCount }} {{ posts[0].likeCount === 1 ? 'Like' : 'Likes' }}</span>
+    </div>
+  </div>
+
+  <!-- Post 2 -->
+  <div class="post">
+    <div class="post-header">
+      <img src="https://via.placeholder.com/50" alt="User" class="avatar">
+      <div class="post-info">
+        <h3>Another User</h3>
+        <small>5 hours ago</small>
+      </div>
+    </div>
+    <div class="post-content">
+      <p>Here’s another example of a post in our social media app.</p>
+      <img src="https://via.placeholder.com/600x300" alt="Post Image">
+    </div>
+    <div class="post-actions">
+      <button (click)="toggleLike(2)" [class.liked]="posts[1].isLiked">
+        <i *ngIf="posts[1].isLiked" class="fa fa-heart"></i>
+        <i *ngIf="!posts[1].isLiked" class="fa fa-heart-o"></i>
+        Like
+      </button>
+      <span>{{ posts[1].likeCount }} {{ posts[1].likeCount === 1 ? 'Like' : 'Likes' }}</span>
+    </div>
+  </div>
+
+  <!-- Post 3 (New Post) -->
+  <div class="post">
+    <div class="post-header">
+      <img src="https://via.placeholder.com/50" alt="User" class="avatar">
+      <div class="post-info">
+        <h3>New User</h3>
+        <small>1 hour ago</small>
+      </div>
+    </div>
+    <div class="post-content">
+      <p><u>Understanding Depression</u></p>
+      <p>
+        Depression is a common but serious mood disorder that affects how you feel, think, and handle daily activities.
+        It can lead to feelings of sadness, hopelessness, and a loss of interest in things once enjoyed.
+      </p>
+      <ul>
+        <li>Feelings of sadness or hopelessness</li>
+        <li>Loss of interest in activities</li>
+        <li>Fatigue or lack of energy</li>
+        <li>Difficulty concentrating</li>
+        <li>Thoughts of death or suicide</li>
+      </ul>
+      <img src="https://via.placeholder.com/600x300" alt="Post Image">
+    </div>
+    <div class="post-actions">
+      <button (click)="toggleLike(3)" [class.liked]="posts[2].isLiked">
+        <i *ngIf="posts[2].isLiked" class="fa fa-heart"></i>
+        <i *ngIf="!posts[2].isLiked" class="fa fa-heart-o"></i>
+        Like
+      </button>
+      <span>{{ posts[2].likeCount }} {{ posts[2].likeCount === 1 ? 'Like' : 'Likes' }}</span>
+    </div>
+  </div>
+</div>

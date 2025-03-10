@@ -1,0 +1,39 @@
+<div class="doctor-details-container">
+  <div class="top-section">
+    <div class="doctor-image">
+      <img src="https://irp-cdn.multiscreensite.com/d8037e1a/dms3rep/multi/Functional+Medicine+Doctor+Chicago.jpeg" alt="Dr Sarah Lee">
+    </div>
+    <div class="doctor-info">
+      <h2>Dr. Sarah Lee</h2>
+      <p>MSc Psychology (UoP) Mental Health Counselor</p>
+      <!-- or any other info you want to place next to the image -->
+    </div>
+  </div>
+
+  <div class="slide" [style.background-image]="getBackgroundImage()">
+    <div class="slide-content">
+      <!-- Slide heading from the TS slides array -->
+      <h2 class="slide-heading">{{ slides[currentSlide].heading }}</h2>
+  
+      <!-- Slide details from the TS slides array -->
+      <div class="info-container">
+        <div class="info-row" *ngFor="let item of slides[currentSlide].content">
+          <strong>{{ item.label }}:</strong> {{ item.value }}
+        </div>
+      </div>
+      <div class="slide-dots">
+        <span
+          *ngFor="let _ of slides; let i = index"
+          class="dot"
+          [class.active]="i === currentSlide"
+          (click)="goToSlide(i)"
+        ></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="actions">
+    <button (click)="navigateToRequest()">Back</button>
+    <button (click)="navigateToRequestDetails()">Request</button>
+  </div>

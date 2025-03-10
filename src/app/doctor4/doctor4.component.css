@@ -1,0 +1,192 @@
+*{
+    background-color: rgb(250, 216, 250);
+}
+.doctor-details-container {
+    max-width:1200px;
+    margin: 0px auto;
+    padding: 40px; 
+    text-align: center;
+}
+  
+.top-section {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    gap: 20px; 
+    margin-bottom: 20px; 
+    flex-wrap: wrap;
+}
+  
+/* Doctor image styling */
+.doctor-image img {
+    align-items: center;
+    border: 0.2px solid #960783;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%; 
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    display: block;
+}
+  
+/* Doctor info styling */
+.doctor-info {
+    text-align: center; 
+    color: #960783;
+}
+  
+.doctor-info h2 {
+    margin: 0;
+    text-align: center;
+    font-size: 1.5rem;
+}
+  
+.slideshow-container {
+    position: relative;
+    width: 90%;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+  
+.slide {
+    position:relative;
+    width: 90%;
+    height:50vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    padding: 20px;
+}
+  
+.slide-image {
+    width: 100%;
+    height: auto;  /* fixed height for the image section */
+    background-position: center;
+    filter: blur(1px);  /* if you want to add a slight blur */
+}
+  
+/* Ensure text remains clear */
+.slide-content {
+    position:absolute;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: justify;
+    width: 60%; /* Adjust width */
+    max-width: 500px; ;
+}
+  
+.slide-heading {
+    font-size: 2em;
+    text-align: center;
+    font-weight: bold;
+    color: purple; 
+    text-shadow: rgb(238, 197, 238);
+    margin-bottom: 15px;
+}
+  
+.info-container {
+    display: flex;
+    color: black;
+    align-items: justify;
+    text-align:left;
+    flex-direction: column;
+    gap: 10px;
+}
+  
+.info-row {
+    font-size: 18px;
+    padding: 8px 40px;
+    border-radius: 8px;
+    width: 100%;
+    align-items: center;
+    background: rgba(190, 165, 165, 0.2);
+}
+  
+/* Navigation Dots */
+.slide-navigation {
+    text-align: center;
+    margin-top: 10px;
+}
+  
+/* Dots container */
+.slide-dots {
+    display: flex;            /* Use flex layout for alignment */
+    justify-content: center;  /* Center the dots horizontally */
+    margin: auto;     /* Vertically center if needed */
+    margin-top: 15px;         /* Space above the dots container */
+}
+  
+/* Individual dot styling */
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;           /* Horizontal gap between dots */
+    background-color: purple;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition for hover/active changes */
+}
+  
+/* Hover effect (optional) */
+.dot:hover {
+    background-color: plum;
+}
+  
+/* Active dot styling */
+.dot.active {
+    background-color:plum;
+    transform: scale(1.1); /* Slightly enlarge the active dot (optional) */
+}
+  
+  
+.actions {
+    margin-top: 20px; /* Space between slideshow and buttons */
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    gap: 20px; /* Space between the buttons */
+}
+    
+.actions button {
+    padding: 10px 30px;
+    width: 120px; /* Slightly wider buttons for better visibility */
+    height: 40px; /* Fixed height for consistent size */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #960783;
+    color: white;
+    transition: background-color 0.3s ease;
+    text-align: center; /* Centers the text inside the button */
+}
+    
+.actions button:hover {
+      background-color: #5b085e; /* Slightly darker shade on hover */
+}
+  
+@media screen and (max-width: 768px) {
+  
+    .slide-content {
+      width: 100%;
+      align-items: center;
+      height: auto;
+      padding: 20px;
+    }
+    .slide-heading {
+      font-size: 18px;
+    }
+    .info-row {
+      font-size: 16px;
+      width: 60%;
+    }
+  
+    .slide{
+    }
+  }
+  
