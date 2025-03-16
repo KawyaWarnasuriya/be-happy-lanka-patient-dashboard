@@ -12,12 +12,21 @@
   font-size: 2em;
 }
 
-
+@keyframes rotateIn {
+  from {
+      opacity: 0;
+      transform: rotate(-10deg);
+  }
+  to {
+      opacity: 1;
+      transform: rotate(0);
+  }
+}
 .doctor-cards {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  animation: bounceIn 1s ease-in-out; /* Add animation */
+  animation: bounceIn 1s ease-in-out; 
   
 }
 
@@ -34,6 +43,9 @@
   opacity: 0.8;  /* Initially hidden */
   transition: opacity 0.5s ease, transform 0.5s ease;  /* Animation timing */
   transition: transform 0.3s;
+  opacity: 0;
+  transform: rotate(-10deg);
+  animation: rotateIn 1.5s ease-out forwards;
 }
 
 .doctor-card:hover{
