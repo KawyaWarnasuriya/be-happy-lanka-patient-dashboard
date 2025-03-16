@@ -1,8 +1,25 @@
 .all {
     margin: auto;
+    align-items: center;
     width: 65%;
     padding: 10px;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(50px);
+    animation: fadeInUp 1.5s ease-out forwards;
 }
+
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+
 
 @media (max-width: 768px) {
     .all {
